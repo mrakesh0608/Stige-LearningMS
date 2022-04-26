@@ -10,7 +10,7 @@
     display: block;
 }
 #user-brief-details span:first-child{
-    font-size: 38px;
+    font-size: 30px;
 }
 #user-brief-details span:nth-child(2){
     font-size: 22px;
