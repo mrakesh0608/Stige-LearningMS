@@ -27,6 +27,10 @@
     height: 200px;
     margin: 6px;
 }
+#profile h3{
+    margin: 10px;
+    text-align: center;
+}
 form div{
     display: flex;
     flex-direction: row;
