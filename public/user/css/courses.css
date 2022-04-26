@@ -4,7 +4,7 @@
     margin: 30px 20px;
 }
 #courses-ul{
-    background-color: rgba(248, 153, 153, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     padding: 20px;
     min-width: 500px;
 }
@@ -41,7 +41,7 @@
 .courses-li-details li{
     display: flex;
     align-items: center;
-    margin: 5px 0;
+    margin: 10px 0;
 }
 .courses-li-details li img{
     width: 30px;
