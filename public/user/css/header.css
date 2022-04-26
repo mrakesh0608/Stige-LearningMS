@@ -4,7 +4,7 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 15px;
+    padding: 5px 12px;
 }
 #div-user{
     display: flex;
