@@ -1,6 +1,6 @@
 //Handling-Errors-Start
 function handleErrors(err){
-    console.log("ss");
+    
     console.log(err.message,err.code);
     // console.log(err.message, err.code);
     const errors = {fullname:'',email:'',password:'',mobileNo:''};
