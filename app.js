@@ -16,10 +16,7 @@ app.use(cookieParser()); //to access from res object
 //DB-Connection-Start
 const dbURI = "mongodb+srv://mrakesh0608:mydb123@cluster0.u0jcl.mongodb.net/LMS?retryWrites=true&w=majority";
 
-mongoose.connect( process.env.MONGODB_URI || dbURI,{
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  })
+mongoose.connect( process.env.MONGODB_URI,{})
 .then( (result) => {
     console.log("\nDB Connected");
     
