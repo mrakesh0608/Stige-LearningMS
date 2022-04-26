@@ -1,0 +1,61 @@
+#user-brief-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+#user-brief-details span{
+    display: block;
+}
+#user-brief-details span:first-child{
+    font-size: 38px;
+}
+#user-brief-details span:nth-child(2){
+    font-size: 22px;
+}
+#profile-img{
+    background-image: url('../../images/profile-user.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.profile-img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: 6px;
+}
+form div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: burlywood;
+    padding: 10px;
+    margin: 10px;
+}
+form label{
+    display: inline-block;
+    width: 250px;
+    padding: 10px 0px;
+    font-size: 18px;
+}
+form input{
+    display: inline-block;
+    width: 250px;
+    padding: 10px 10px 10px 10px;
+}
+form input[type=file]{
+    margin: 0;
+    padding: 0;
+}
+form button{
+    padding: 10px;
+    font-size: 20px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    font-weight: bold;
+}

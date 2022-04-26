@@ -1,0 +1,60 @@
+.task-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 10px 10px;
+    padding: 5px 25px;
+}
+#completed{
+    background-color: springgreen;
+    padding: 5px;
+    border-radius: 15px;
+}
+.task{
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 10px 10px;
+}
+.task >*{
+    margin: 10px 0;
+}
+.task p{
+    font-size: 18px;
+    text-align: justify;
+}
+.task .links{
+    display: flex;
+    flex-wrap: wrap;
+}
+.task a{
+    background-color: #0274be;
+    padding: 20px;
+    margin: 5px 15px;
+    margin-left: 0;
+}
+.yt-video{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+#markAsComplete,#backToCourse{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 10px 10px;
+}
+#backToCourse a,#markAsComplete button{
+    padding: 12px 16px;
+    background-color: springgreen;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px;
+}
+#backToCourse a{
+    background-color: burlywood;
+}

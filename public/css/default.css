@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: ProximaNova,arial,Helvetica Neue,sans-serif;
+    background-color: rgb(228, 225, 225);
+
+    /* footer always at bottom */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="user/css/header.css">
+    <link rel="stylesheet" href="user/css/dashboard.css">
+    <title>Stige | Dashboard</title>
+</head>
+
+<body>
+    <%- include('header.ejs') %>
+    <div id="dashboard" class="flex-column">
+        <div id="dashboard-user-info" class="flex-column flex-wrap">
+            <% if(user.userImg.data){ %>
+                <div><img class="userImg" src="<%=user.userImg.data.toString('base64')%>" alt=""></div>
+            <% } else{%>
+                <div id="dashboard-user-img" class="userImg"></div>
+            <%}%>
+            <!-- img show from back-image -->
+            <ul class="flex-row">
+                <li>
+                    <span>Courses</span>
+                    <span>2</span>
+                </li>
+                <li>
+                    <span>Completed</span>
+                    <span>1</span>
+                </li>
+                <li>
+                    <span>Certificates</span>
+                    <span>0</span>
+                </li>
+            </ul>
+        </div>
+
+        <div id="your-courses">
+            <span>Your Courses</span>
+            <ul>
+                <li class="course"><a href="courses">Pre-Course Work</a></li>
+                <li class="course"><a href="courses">Software Development</a></li>
+            </ul>
+        </div>
+    </div>
+    <%- include('../footer.ejs') %>
+</body>
+
+</html>

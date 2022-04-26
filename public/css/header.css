@@ -1,0 +1,23 @@
+header{
+    /* background-color: rgb(184, 226, 179); */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+}
+header a{
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+#header-login{
+    background-color: white;
+    color: black;
+}
+#header-signup{
+    background-color: rgb(4, 128, 0);
+    color: white;
+    
+}

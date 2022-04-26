@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="user/css/header.css">
+    <link rel="stylesheet" href="user/css/your-tasks.css">
+    <title>Stige | Your Tasks</title>
+</head>
+
+<body>
+    <%- include('header.ejs') %>
+    <div id="your-tasks">
+        <div id="create-task">
+            <button>Create New Task</button>
+        </div>
+        <div class="tasks" id="task-not-c">
+            <ul class="task-ul">
+                <h3>Not Completed Tasks</h3>
+                <% Array.from(tasksNComp).forEach(function(key) {%>
+                    <li class="task-list" id="<%=key._id%>">
+                        <div class="task-meta">
+                            <div>
+                                <span><strong>Deadline : </strong><%=key.deadline%></span>
+                            </div>
+                            <div>
+                                <button class="btn-update">Update</button>
+                                <button class="btn-delete">Delete</button>
+                            </div>
+                        </div>
+                        <p class="task-desc"><strong>Description : </strong><%=key.desc%></p>
+                    </li>
+                <% }); %>
+                <% if(tasksNComp.length == 0){%>
+                    <li class="empty-list">Empty List</li>
+                <% }%>
+            </ul>
+        </div>
+        <div class="tasks" id="task-c">
+            <ul class="task-ul">
+                <h3>Completed Tasks</h3>
+                <% Array.from(tasksComp).forEach(function(key) {%>
+                    <li class="task-list" id="<%=key._id%>">
+                        <div class="task-meta">
+                            <div><strong>Deadline : </strong><%=key.deadline%></div>
+                            <div>
+                                <button class="btn-update">Update</button>
+                                <button class="btn-delete">Delete</button>
+                            </div>
+                        </div>
+                        <p class="task-desc"><strong>Description : </strong><%=key.desc%></p>
+                    </li>
+                <% }); %>
+                <% if(tasksComp.length == 0){%>
+                    <li class="empty-list">Empty List</li>
+                <% }%>
+            </ul>
+        </div>
+    </div>
+    <div id="new-task" class="form-task">
+        <div class="form-task-content">
+            <div class="form-task-header">
+                <span>New Task</span>
+                <button id="cancel-new-task">Cancel</button>
+            </div>
+            <form>
+                <label for="desc">
+                    <span>Description</span> 
+                    <textarea name="desc" id="" cols="30" rows="5" required></textarea>
+                </label>
+                
+                <label for="deadline">
+                    <span>Deadline</span>
+                    <input type="date" name="deadline" required>
+                </label>
+                
+                <label>
+                    <input type="radio" name="completed" value="Mark as Completed">
+                    <span>Mark as Completed</span>
+                </label>
+                
+                <label>
+                    <input type="radio" name="completed" value="Mark as Not Completed" checked>
+                    <span>Mark as Not Completed</span>
+                    
+                </label>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="update-task" class="form-task">
+        <div class="form-task-content">
+            <div class="form-task-header">
+                <span>Update Task</span>
+                <button id="cancel-update-task">Cancel</button>
+            </div>
+            <form>
+                
+                <label for="desc">
+                    <span>Description</span>
+                    <textarea name="desc" cols="30" rows="5" required></textarea>
+                </label>
+                
+                <label for="deadline">
+                    <span>Deadline</span>
+                    <input type="date" name="deadline" required>
+                </label>
+                
+                <label>
+                    <input type="radio" name="completed" value="Mark as Completed">
+                    <span>Mark as Completed</span>
+                </label>
+                
+                <label>
+                    <input type="radio" name="completed" value="Mark as Not Completed" checked>
+                    <span>Mark as Not Completed</span>
+                </label>
+                <div><button type="submit">Update</button></div>
+            </form>
+        </div>
+    </div>
+    <%- include('../footer.ejs') %>
+    <script>
+        const userEmail = '<%= user.email %>';
+    </script>
+    <script src="user/js/your-tasks.js"></script>
+</body>
+
+</html>

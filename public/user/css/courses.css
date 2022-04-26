@@ -1,0 +1,48 @@
+#courses{
+    display: flex;
+    justify-content: center;
+    margin: 30px 20px;
+}
+#courses-ul{
+    background-color: rgba(248, 153, 153, 0.2);
+    padding: 20px;
+    min-width: 500px;
+}
+@media(max-width:560px){
+    #courses-ul{
+        min-width: 320px;
+    }
+}
+.courses-li{
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+.courses-li-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.courses-li-head span{
+    font-size: 28px;
+}
+.courses-li-btn{
+    transition: 0.5s ease;
+    background-image: url('../../images/chevron.png');
+    width: 30px;
+    height: 30px;
+}
+.courses-li-details li{
+    display: flex;
+    align-items: center;
+}
+.courses-li-details li img{
+    width: 30px;
+    margin-right: 10px;
+}
+.courses-tasks{
+    font-size: 18px;
+}
+.courses-li-details{
+    display: none;
+}

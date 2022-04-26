@@ -1,0 +1,100 @@
+#main{
+    
+    background-image: url('../images/home-back.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#main1{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+header h1{
+    color: white;
+}
+#main-desc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 150px 20px;
+    text-align: center;
+}
+#main h2{
+    font-size: 40px;
+    color: aqua;
+}
+#main p{
+    font-size: 25px;
+    color: white;
+}
+
+#home #features,#courses,#feedback{
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+#features li h3,#courses li h3{
+    font-size: 25px;
+}
+#features{
+    background-color: rgb(93, 40, 15);
+}
+
+#features li{
+    max-width:600px;
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+}
+#features li p{
+    font-size: 20px;
+}
+
+
+#courses li{
+    min-width: 220px;
+    background-color: rgb(55, 161, 69);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+}
+#courses li a{
+    font-size: 18px;
+}
+#feedback-div{
+    background-color: gainsboro;
+}
+#feedback li{
+    min-width: 200px;
+    background-color: burlywood;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.feedback-desc{
+    font-size: 25px; 
+}
+.feedback-student{
+    font-size: 20px;
+    padding: 10px 0px;
+    font-weight: bold;
+}
+.feedback-student-course{
+    font-size: 18px;
+}
+#feedback-div h3,h4{
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+}
+#feedback-div h3{
+    font-size: 35px;
+}
+#feedback-div h4{
+    font-size: 20px;
+}

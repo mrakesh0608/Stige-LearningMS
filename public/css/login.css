@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(195, 204, 214);
+}
+#login{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+}
+form{
+    background-color: rgb(71, 99, 255);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+}
+form div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+}
+form div:first-child,div:last-child{
+    justify-content: center;
+}
+form label{
+    display: inline-block;
+    font-size: 20px;
+    width: 100px; 
+}
+form input{
+    padding: 10px 10px 10px 10px;
+    font-size: 18px;
+}
+form button{
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}

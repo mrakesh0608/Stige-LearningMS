@@ -1,0 +1,116 @@
+#your-tasks{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(176, 166, 184);
+    margin: 10px;
+    position: relative;
+}
+#your-tasks button{
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+#create-task{
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+}
+.tasks{
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.task-ul h3{
+    padding: 10px;
+}
+.task-list{
+    padding: 10px;
+    background-color: thistle;
+    border-radius: 20px;
+    margin: 15px 0;
+}
+.task-meta{
+    display: flex;
+    justify-content: space-between;
+    background-color: tomato;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+    border-radius: 25px;
+}
+.task-desc{
+    /* background-color: purple; */
+    padding: 10px ;
+}
+#task-not-c{
+    background-color: burlywood;
+}
+#task-c{
+    background-color: limegreen;
+}
+.empty-list{
+    text-align: center;
+    font-size: 20px;
+    background-color: rgb(120, 122, 231);
+}
+
+/* new-update task */
+.form-task-header{
+    background-color: yellow;
+    display: flex;
+    justify-content:space-between;
+    padding: 10px;
+}
+.form-task{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+}
+.form-task-content{
+    margin: 10px;
+}
+.form-task-content form{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.form-task-content form > *{
+    margin: 20px;
+    text-align: center;
+}
+.form-task-content input{
+    padding: 10px;
+    min-height: 50px;
+}
+.form-task-content label{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.form-task-content span{
+    padding: 10px;
+    font-size: 20px;
+}
+textarea{
+    resize: none;
+}
+.form-task-content input[type="radio"]{
+    margin-top:0;
+}
+.form-task{
+    display: none;
+}
+.form-task-content form button{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}

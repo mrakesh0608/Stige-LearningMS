@@ -1,0 +1,26 @@
+<header>
+    <div>
+        <a href="/"><h1>Stige</h1></a>
+    </div>
+    <div id="div-user">
+        <span id="greeting">Welcome, <%= user.fullname %></span>
+        <div class="dropdown">
+            <% if(user.userImg.data){ %>
+                <div><img class="user-img"src="<%=user.userImg.data.toString('base64')%>" alt=""></div>
+            <% } else{%>
+                <div id="user-img" class="user-img"></div>
+            <%}%>
+            <!-- img show from back-image -->
+            <div class="dropdown-content flex-column">
+                <a href="/dashboard">Dashboard</a>
+                <a href="/profile">Profile</a>
+                <a href="/courses">Course</a>
+                <a href="/your-tasks">Your Tasks</a>
+                <a href="/logout">Logout</a>
+            </div>
+        </div>
+    </div>
+</header>
+<div id="currentPage">
+    <span><%= currentPage %></span>
+</div>

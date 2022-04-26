@@ -1,0 +1,47 @@
+body{
+    background-color: gainsboro;
+}
+#signup{
+    display: flex;
+    justify-content: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: burlywood;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+form div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    max-width: 600px;
+    border-radius: 10px;
+}
+form label{
+    display: inline-block;
+    width: 250px;
+    padding: 10px 0px;
+    font-size: 20px;
+}
+form input{
+    display: inline-block;
+    width: 250px;
+    padding: 10px 10px 10px 10px;
+}
+form input[type=file]{
+    margin: 0;
+    padding: 0;
+}
+form button{
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}

@@ -1,0 +1,50 @@
+#dashboard{
+    padding: 20px;
+}
+#dashboard h1{
+    text-align: center;
+}
+#dashboard-user-info{
+    align-items: center;
+}
+#dashboard-user-info ul{
+    list-style: none;
+    padding: 10px;
+    background-color: burlywood;
+    border-radius: 10px;
+}
+#dashboard-user-info li{
+    padding: 10px;
+    border-right: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#dashboard-user-info li:last-child{
+    border: 0;
+}
+#dashboard-user-img{
+    background-image: url('../../images/profile-user.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.userImg{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: 6px;
+}
+#your-courses{
+    margin: 15px 0;
+}
+#your-courses span{
+    margin: 10px;
+}
+.course{
+    width: 100%;
+    margin: 10px;
+    background-color: rgb(177, 171, 171);
+    padding: 10px;
+    border-radius: 5px;
+}

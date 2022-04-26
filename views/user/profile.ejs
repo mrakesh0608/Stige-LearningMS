@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="user/css/header.css">
+    <link rel="stylesheet" href="user/css/profile.css">
+    <title>Stige | Profile</title>
+</head>
+
+<body>
+    <%- include('header.ejs') %>
+    <div id="profile">
+        <div id="user-brief-details">
+
+            <% if(user.userImg.data){ %>
+                <div><img class="profile-img" src="<%=user.userImg.data.toString('base64')%>" alt=""></div>
+            <% } else{%>
+                <div id="profile-img" class="profile-img"></div>
+            <%}%>
+            <div>
+                <span><%= user.fullname %></span>
+                <span><%= user.email %></span>
+                <span><%= user.address %></span>
+            </div>
+        </div>
+        <h3>Account</h3>
+        
+        <form>
+            <div>
+                <label for="fullname">Full name</label>
+                <input type="text" name="fullname" required>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" readonly>
+            </div>
+            <div>
+                <label for="mobileNo">Mobile No</label>
+                <input type="number" name="mobileNo" required>
+            </div>
+            <div>
+                <label for="address">Address</label>
+                <input type="text" name="address">
+            </div>
+            <div>
+                <label for="userImg">Profile Photo</label>
+                <input type="file" name="userImg" id="userImg">
+            </div>
+            <div>
+                <button type="submit">Update Profile</button>
+            </div>
+        </form>
+    </div>
+    <%- include('../footer.ejs') %>
+    <script>
+        const form2 = document.querySelector('form');
+        form2.fullname.value = '<%= user.fullname %>';
+        form2.email.value = '<%= user.email %>';
+        form2.mobileNo.value = '<%= user.mobileNo %>';
+        form2.address.value = '<%= user.address %>';
+    </script>
+    <script src="user/js/profile.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="user/css/header.css">
+    <link rel="stylesheet" href="user/css/courses.css">
+    <title>Stige | Courses</title>
+</head>
+
+<body>
+    <%- include('header.ejs') %>
+    <div id="courses">
+        <ul id="courses-ul">
+            <% Array.from(courses).forEach( (key)=>{%>
+                    <li class="courses-li" id="<%= key._id %>">
+                        <div class="courses-li-head">
+                            <span><%= key.course%></span>
+                            <div class="courses-li-btn"></div>
+                        </div>
+                        <ul class="courses-li-details">
+                            <% Object.keys(key.tasks).forEach( (task)=>{%>
+                                <li id="<%= key.tasks[task].path%>">
+                                    <span><img src="
+                                        <% if(key.tasks[task].completed){ %>
+                                            ../../images/check.png
+                                        <% }else{ %>
+                                            ../../images/circle.png
+                                        <% } %>"
+                                         alt="check"></span>
+                                    
+                                    <span class="courses-tasks"><a href="/courses/<%= key.tasks[task].path%>"><%= task %></a></span>
+                                </li>
+                            <% }) %>
+                        </ul>
+                    </li>        
+            <% }) %>
+        </ul>
+    </div>
+    <%- include('../footer.ejs') %>
+    <script src="user/js/courses.js"></script>
+</body>
+
+</html>
