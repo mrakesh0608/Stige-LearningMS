@@ -32,7 +32,8 @@
             </div>
             <div>
                 <label for="mobileNo">Mobile No</label>
-                <input type="tel" name="mobileNo" pattern="[0-9]{3}" required>
+                <input type="tel" name="mobileNo" minlength="10" maxlength="10" pattern="[0-9]{10}" required oninvalid="this.setCustomValidity('Invalid Mobile No Format')"
+                oninput="this.setCustomValidity('')">
             </div>
             <div>
                 <label for="address">Address</label>
