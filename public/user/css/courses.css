@@ -4,8 +4,6 @@
     margin: 30px 20px;
 }
 #courses-ul{
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 20px;
     min-width: 500px;
 }
 @media(max-width:560px){
