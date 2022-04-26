@@ -20,7 +20,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 10px;
 }
 .courses-li-head span{
     font-size: 28px;
@@ -39,7 +38,7 @@
 .courses-li-details li{
     display: flex;
     align-items: center;
-    margin: 10px 0;
+    margin: 15px 0;
 }
 .courses-li-details li img{
     width: 30px;
