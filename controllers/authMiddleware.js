@@ -36,7 +36,7 @@ module.exports.CheckUser = (req,res, next)=>{
             else{ //user logged in
                 
                 // console.log(decodedToken);
-                let user = await User.findById(decodedToken.id);
+                const user = await User.findById(decodedToken.id);
                 console.log("\nCurrent User Email: "+user.email+"\n");
                 res.locals.user = user;
                 next();//carry on next middleware
