@@ -26,6 +26,11 @@
 .courses-li-head span{
     font-size: 28px;
 }
+@media(max-width:500px){
+    .courses-li-head span{
+        font-size: 20px;
+    }
+}
 .courses-li-btn{
     transition: 0.5s ease;
     background-image: url('../../images/chevron.png');
@@ -35,6 +40,7 @@
 .courses-li-details li{
     display: flex;
     align-items: center;
+    margin: 5px 0;
 }
 .courses-li-details li img{
     width: 30px;
