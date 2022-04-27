@@ -165,9 +165,23 @@ module.exports.updateYourCoursesTask = async (req,res)=>{
         
         const course = await Course.findOneAndUpdate( {_id:courseID,email} , {[field]:true});
         
-        console.log("gg\n"+course);
-        const courseMD = await Course.find( {_id:courseID,email});
-        console.log(courseMD[0].tasks);
+        console.log(course);
+        //if all tasks completed do this-start
+        const courseUP = await Course.find( {_id:courseID,email});
+        // console.log(courseUP[0].tasks);
+
+        let noOfTasksCompleted = 0;
+        Object.keys(courseUP[0].tasks).forEach( (task)=>{
+            if(courseUP[0].tasks[task].completed){
+                noOfTasksCompleted++;
+            }
+        })
+        if(noOfTasksCompleted === (courseUP[0].tasks).length)
+        {
+            const courseUP2 = await Course.findOneAndUpdate( {_id:courseID,email} , {completed:true});
+            console.log(courseUP2);
+        }
+        //if all tasks completed do this-ends
 
         res.status(200).json( {updated:true} );
         console.log("Task Updated");
