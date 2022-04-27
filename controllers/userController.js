@@ -93,12 +93,19 @@ module.exports.getYourCoursesDashboard = async (req,res)=>{
 
     const email = res.locals.user.email
     const courses = await Course.find({email})
-    res.locals.courses = courses;
-    console.log(courses);
+    // res.locals.courses = courses;
+    // console.log(courses);
 
-    for(i=0; i<courses.length;i++){
-        console.log(courses[i].completed); 
+    const noOfCourses = courses.length;
+    let coursesCompleted = 0;
+    for(i=0; i<noOfCourses;i++){
+        // console.log(courses[i].completed)
+        if(courses[i].completed){
+            coursesCompleted++;
+        }
     }
+    console.log(noOfCourses,coursesCompleted);
+    res.locals.coursesDashboard = {noOfCourses,coursesCompleted};
 
     res.locals.currentPage = 'Dashboard';
     res.render('user/dashboard');
