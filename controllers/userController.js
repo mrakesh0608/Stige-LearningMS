@@ -166,7 +166,7 @@ module.exports.updateYourCoursesTask = async (req,res)=>{
         const course = await Course.findOneAndUpdate( {_id:courseID,email} , {[field]:true});
         
         console.log("gg\n"+course);
-        const courseMD = await Course.findOne( {_id:courseID,email});
+        const courseMD = await Course.find( {_id:courseID,email});
         console.log(Object.keys(courseMD));
 
         res.status(200).json( {updated:true} );
