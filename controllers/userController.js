@@ -167,7 +167,7 @@ module.exports.updateYourCoursesTask = async (req,res)=>{
         
         console.log("gg\n"+course);
         const courseMD = await Course.find( {_id:courseID,email});
-        console.log(courseMD.tasks);
+        console.log(courseMD.completed);
 
         res.status(200).json( {updated:true} );
         console.log("Task Updated");
