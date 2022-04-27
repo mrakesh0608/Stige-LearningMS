@@ -21,6 +21,7 @@ module.exports.courseInitiator = (email)=>{
             const course = await Course.create({
                 email,
                 course: courseName,
+                completed: false,
                 tasks: courses[courseName]
             })
             console.log("\nCourses are created for new user");

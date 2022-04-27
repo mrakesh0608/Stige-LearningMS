@@ -94,6 +94,7 @@ module.exports.getYourCourses = async (req,res)=>{
     const email = res.locals.user.email
     const courses = await Course.find({email})
     res.locals.courses = courses;
+    console.log(courses);
     // console.log(courses[0].tasks);
 
     res.locals.currentPage = 'Your Courses';

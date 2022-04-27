@@ -6,6 +6,10 @@ const courseSchema = new Schema({
         type: String,
         required: true
     },
+    completed:{
+        type: Boolean,
+        required: true
+    },
     email:{
         type: String,
         required: true
