@@ -7,11 +7,7 @@ const router = express.Router(); //instance of router
 
 
 //GET Requests-Start
-router.get('/dashboard',authMiddleware.verifyAuth,(req,res)=>{
-    res.locals.currentPage = 'Dashboard';
-    // console.log(res.locals.currentPage);
-    res.render('user/dashboard');
-})
+router.get('/dashboard',authMiddleware.verifyAuth,userController.getYourCoursesDashboard)
 
 router.get('/profile',authMiddleware.verifyAuth,(req,res)=>{
     res.locals.currentPage = 'Your Profile';

@@ -89,12 +89,23 @@ module.exports.taskManager = async (req,res)=>{
 }
 
 //Courses-Modules-Start
-module.exports.getYourCourses = async (req,res)=>{
+module.exports.getYourCoursesDashboard = async (req,res)=>{
 
     const email = res.locals.user.email
     const courses = await Course.find({email})
     res.locals.courses = courses;
     console.log(courses);
+
+    res.locals.currentPage = 'Dashboard';
+    res.render('user/dashboard');
+}
+
+module.exports.getYourCourses = async (req,res)=>{
+
+    const email = res.locals.user.email
+    const courses = await Course.find({email})
+    res.locals.courses = courses;
+    // console.log(courses);
     // console.log(courses[0].tasks);
 
     res.locals.currentPage = 'Your Courses';
