@@ -96,6 +96,10 @@ module.exports.getYourCoursesDashboard = async (req,res)=>{
     res.locals.courses = courses;
     console.log(courses);
 
+    for(i=0; i<courses.length;i++){
+        console.log(courses[i].completed); 
+    }
+
     res.locals.currentPage = 'Dashboard';
     res.render('user/dashboard');
 }
