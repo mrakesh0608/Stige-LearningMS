@@ -165,7 +165,8 @@ module.exports.updateYourCoursesTask = async (req,res)=>{
         
         const course = await Course.findOneAndUpdate( {_id:courseID,email} , {[field]:true});
         
-        console.log(course);
+        // console.log(course);
+        
         //if all tasks completed do this-start
         const courseUP = await Course.find( {_id:courseID,email});
         // console.log(courseUP[0].tasks);
@@ -179,7 +180,7 @@ module.exports.updateYourCoursesTask = async (req,res)=>{
         if(noOfTasksCompleted === (Object.keys(courseUP[0].tasks).length))
         {
             const courseUP2 = await Course.findOneAndUpdate( {_id:courseID,email} , {completed:true});
-            console.log(courseUP2);
+            // console.log(courseUP2);
         }
         //if all tasks completed do this-ends
 
