@@ -9,7 +9,7 @@
     background-color: rgba(0, 0, 0, 0.8);
 }
 header{
-    background-color: none !important;
+    background-color: red;
 }
 header h1{
     color: white;
