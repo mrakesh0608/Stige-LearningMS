@@ -14,6 +14,12 @@ header{
 header h1{
     color: white;
 }
+header #div-user #greeting{
+    color: white;
+}
+header #div-user #user-img{
+    filter: invert(100%);
+}
 #main-desc{
     display: flex;
     flex-direction: column;
