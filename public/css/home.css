@@ -8,6 +8,9 @@
 #main1{
     background-color: rgba(0, 0, 0, 0.8);
 }
+header{
+    background-color: none;
+}
 header h1{
     color: white;
 }
