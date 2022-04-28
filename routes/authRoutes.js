@@ -4,7 +4,10 @@ const router = express.Router();
 const authController = require('../controllers/authController');
 
 //GET Requests-Start
-router.get('/',(req,res)=> res.render('home'));
+router.get('/',(req,res)=> {
+    res.locals.currentPage = 'Home';
+    res.render('home')
+});
 
 router.get('/login', authController.login_get);
 

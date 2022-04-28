@@ -21,6 +21,8 @@
         </div>
     </div>
 </header>
-<div id="currentPage">
-    <span><%= currentPage %></span>
-</div>
+<% if(currentPage !== Home){ %>
+    <div id="currentPage">
+        <span><%= currentPage %></span>
+    </div>
+<% } %>
