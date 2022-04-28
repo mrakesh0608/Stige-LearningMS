@@ -14,7 +14,11 @@
     <div id='home'>
         <div id="main">
             <div id="main1">
-                <%- include('header.ejs') %>
+                <% if(user){ %>
+                    <%- include('user/header.ejs') %>
+                <% } else { %>
+                    <%- include('header.ejs') %>
+                <% } %>
                 <div id="main-desc">
                     <h2>Virtual Internship Training Program</h2>
                     <p>Get trained, work on live projects and get certified in 8 weeks.</p>
